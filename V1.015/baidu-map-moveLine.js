@@ -442,21 +442,16 @@ var MoveLine = function MoveLine(map, userOptions) {
         //     requestAnimationFrame(drawFrame);
         //     render();
         // })();
-        var primaryCtx = animationLayer.canvas.getContext('2d');
+  
         // var primaryCtx = document.getElementById("canvas")[0].getContext("2d");
         (function drawFrame() {
 
             requestAnimationFrame(drawFrame);
             render();
-            primaryCtx.save(); //Freeze redraw
-        
-            primaryCtx.fillStyle = "#f00";
-        
-            primaryCtx.fillRect(10,10,20,20);
-        
-            primaryCtx.restore(); //And now do the redraw
+           
         
             })();
+            
     };
 
     init(map, options);
